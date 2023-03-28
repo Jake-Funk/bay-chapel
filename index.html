@@ -4,11 +4,432 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Step TWO DISC assessment</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel = "stylesheet" href = "discBayChapel.css">
+    <script defer src = "disc.js"></script>
+    <script defer src = "growthtrackscript.js"></script>
 </head>
-<body style="border: solid red 1px; padding: 0px; margin: 0px">
-    <div>
-        <h1>This is a test page for Bay Chapel</h1>
+<body>
+    <div class="content">
+        <div id = "DISCassesspage">
+            <h1 class="heading">DISC Personality Test</h1>
+            <div id="intro">
+                <p>
+                    Respond to the statements on each page according to how well each statement describes you. Use this scale to number each statement:<br>
+                </p>
+                <p>
+                    1 - Never<br>
+                    2 - Rarely<br>
+                    3 - Sometimes<br>
+                    4 - Often<br>
+                    5 - Always<br>
+                </p>
+                <p>
+                    Allow yourself six minutes to answer all questions before moving on
+                </p>
+                <div style="display: flex; justify-content: center">
+                    <button id="startBtn">
+                        Get Started
+                    </button>
+                </div>
+            </div>
+            <div id = "container" class = "hide"> 
+                <div id ="dlegend">
+                    <div>1. Never</div>
+                    <div> 2. Rarely</div>
+                    <div> 3. Sometimes</div>
+                    <div> 4. Often</div>
+                    <div> 5. Always</div>
+                </div>
+                <div>
+                    <ol id="questionList">
+                        <div data-step class="dataStep hide">
+                            <li>
+                                <p>
+                                    I am assertive, demanding, and decisive
+                                </p>
+                                <div>
+                                    <input required class = "dradio__input" type="radio" name="dq1" value="1" id = "dmyradio1"/><label class = "dradio__label" for="dmyradio1">1</label> 
+                                    <input required class = "dradio__input" type="radio" name="dq1" value="2" id = "dmyradio2"/><label class = "dradio__label" for="dmyradio2">2</label>
+                                    <input required class = "dradio__input" type="radio" name="dq1" value="3" id = "dmyradio3"/><label class = "dradio__label" for="dmyradio3">3</label>
+                                    <input required class = "dradio__input" type="radio" name="dq1" value="4" id = "dmyradio4"/><label class = "dradio__label" for="dmyradio4">4</label>
+                                    <input required class = "dradio__input" type="radio" name="dq1" value="5" id = "dmyradio5"/><label class = "dradio__label" for="dmyradio5">5</label> 
+                                </div>
+                            </li>
+                            <li>
+                                <p>
+                                    I enjoy influencing and inspiring other people
+                                </p>
+                                <div class = "dradioinputs">
+                                    <input required class = "dradio__input" type="radio" name="dq2" value="1" id = "dmyradio6"/><label class = "dradio__label" for="dmyradio6">1</label> 
+                                    <input class = "dradio__input" type="radio" name="dq2" value="2" id = "dmyradio7"/><label class = "dradio__label" for="dmyradio7">2</label>
+                                    <input class = "dradio__input" type="radio" name="dq2" value="3" id = "dmyradio8"/><label class = "dradio__label" for="dmyradio8">3</label>
+                                    <input class = "dradio__input" type="radio" name="dq2" value="4" id = "dmyradio9"/><label class = "dradio__label" for="dmyradio9">4</label>
+                                    <input class = "dradio__input" type="radio" name="dq2" value="5" id = "dmyradio10"/><label class = "dradio__label" for="dmyradio10">5</label> 
+                                </div>
+                            </li>
+                            <li>
+                                <p>
+                                    I thrive in consistent environments
+                                </p>
+                                <div class = "dradioinputs">
+                                    <input required class = "dradio__input" type="radio" name="dq3" value="1" id = "dmyradio11"/><label class = "dradio__label" for="dmyradio11">1</label> 
+                                    <input class = "dradio__input" type="radio" name="dq3" value="2" id = "dmyradio12"/><label class = "dradio__label" for="dmyradio12">2</label>
+                                    <input class = "dradio__input" type="radio" name="dq3" value="3" id = "dmyradio13"/><label class = "dradio__label" for="dmyradio13">3</label>
+                                    <input class = "dradio__input" type="radio" name="dq3" value="4" id = "dmyradio14"/><label class = "dradio__label" for="dmyradio14">4</label>
+                                    <input class = "dradio__input" type="radio" name="dq3" value="5" id = "dmyradio15"/><label class = "dradio__label" for="dmyradio15">5</label> 
+                                </div>
+                            </li>
+                            <li>
+                                <p>
+                                    I typically do not take big risks
+                                </p>
+                                <div class = "dradioinputs">
+                                    <input required class = "dradio__input" type="radio" name="dq4" value="1" id = "dmyradio16"/><label class = "dradio__label" for="dmyradio16">1</label> 
+                                    <input class = "dradio__input" type="radio" name="dq4" value="2" id = "dmyradio17"/><label class = "dradio__label" for="dmyradio17">2</label>
+                                    <input class = "dradio__input" type="radio" name="dq4" value="3" id = "dmyradio18"/><label class = "dradio__label" for="dmyradio18">3</label>
+                                    <input class = "dradio__input" type="radio" name="dq4" value="4" id = "dmyradio19"/><label class = "dradio__label" for="dmyradio19">4</label>
+                                    <input class = "dradio__input" type="radio" name="dq4" value="5" id = "dmyradio20"/><label class = "dradio__label" for="dmyradio20">5</label> 
+                                </div>
+                            </li>
+                        </div>
+                        <div data-step class="dataStep hide">
+                            <li>
+                                <p>
+                                    I enjoy doing multiple tasks at once
+                                </p>
+                                <div class = "dradioinputs">
+                                    <input required class = "dradio__input" type="radio" name="dq5" value="1" id = "dmyradio21"/><label class = "dradio__label" for="dmyradio21">1</label> 
+                                    <input required class = "dradio__input" type="radio" name="dq5" value="2" id = "dmyradio22"/><label class = "dradio__label" for="dmyradio22">2</label>
+                                    <input required class = "dradio__input" type="radio" name="dq5" value="3" id = "dmyradio23"/><label class = "dradio__label" for="dmyradio23">3</label>
+                                    <input required class = "dradio__input" type="radio" name="dq5" value="4" id = "dmyradio24"/><label class = "dradio__label" for="dmyradio24">4</label>
+                                    <input required class = "dradio__input" type="radio" name="dq5" value="5" id = "dmyradio25"/><label class = "dradio__label" for="dmyradio25">5</label> 
+                                </div>
+                            </li>
+                            <li>
+                                <p>
+                                    I am optimistic about others 
+                                </p>
+                                <div class = "dradioinputs">
+                                    <input required class = "dradio__input" type="radio" name="dq6" value="1" id = "dmyradio26"/><label class = "dradio__label" for="dmyradio26">1</label> 
+                                    <input required class = "dradio__input" type="radio" name="dq6" value="2" id = "dmyradio27"/><label class = "dradio__label" for="dmyradio27">2</label>
+                                    <input required class = "dradio__input" type="radio" name="dq6" value="3" id = "dmyradio28"/><label class = "dradio__label" for="dmyradio28">3</label>
+                                    <input required class = "dradio__input" type="radio" name="dq6" value="4" id = "dmyradio29"/><label class = "dradio__label" for="dmyradio29">4</label>
+                                    <input required class = "dradio__input" type="radio" name="dq6" value="5" id = "dmyradio30"/><label class = "dradio__label" for="dmyradio30">5</label> 
+                                </div>
+                            </li>
+                            <li>
+                                <p>
+                                    I prefer specifics over generalizations
+                                </p>
+                                <div class = "dradioinputs">
+                                    <input required class = "dradio__input" type="radio" name="dq7" value="1" id = "dmyradio31"/><label class = "dradio__label" for="dmyradio31">1</label> 
+                                    <input required class = "dradio__input" type="radio" name="dq7" value="2" id = "dmyradio32"/><label class = "dradio__label" for="dmyradio32">2</label>
+                                    <input required class = "dradio__input" type="radio" name="dq7" value="3" id = "dmyradio33"/><label class = "dradio__label" for="dmyradio33">3</label>
+                                    <input required class = "dradio__input" type="radio" name="dq7" value="4" id = "dmyradio34"/><label class = "dradio__label" for="dmyradio34">4</label>
+                                    <input required class = "dradio__input" type="radio" name="dq7" value="5" id = "dmyradio35"/><label class = "dradio__label" for="dmyradio35">5</label> 
+                                </div>
+                            </li>
+                            <li>
+                                <p>
+                                    I love tasks, order, and details
+                                </p>
+                                <div class = "dradioinputs">
+                                    <input required class = "dradio__input" type="radio" name="dq8" value="1" id = "dmyradio36"/><label class = "dradio__label" for="dmyradio36">1</label> 
+                                    <input required class = "dradio__input" type="radio" name="dq8" value="2" id = "dmyradio37"/><label class = "dradio__label" for="dmyradio37">2</label>
+                                    <input required class = "dradio__input" type="radio" name="dq8" value="3" id = "dmyradio38"/><label class = "dradio__label" for="dmyradio38">3</label>
+                                    <input required class = "dradio__input" type="radio" name="dq8" value="4" id = "dmyradio39"/><label class = "dradio__label" for="dmyradio39">4</label>
+                                    <input required class = "dradio__input" type="radio" name="dq8" value="5" id = "dmyradio40"/><label class = "dradio__label" for="dmyradio40">5</label> 
+                                </div>
+                            </li>
+                        </div>
+                        <div data-step class="dataStep hide">
+                            <li>
+                                <p>
+                                    I thrive in a challenge-based environment
+                                </p>
+                                <div class = "dradioinputs">
+                                    <input required class = "dradio__input" type="radio" name="dq9" value="1" id = "dmyradio41"/><label class = "dradio__label" for="dmyradio41">1</label> 
+                                    <input required class = "dradio__input" type="radio" name="dq9" value="2" id = "dmyradio42"/><label class = "dradio__label" for="dmyradio42">2</label>
+                                    <input required class = "dradio__input" type="radio" name="dq9" value="3" id = "dmyradio43"/><label class = "dradio__label" for="dmyradio43">3</label>
+                                    <input required class = "dradio__input" type="radio" name="dq9" value="4" id = "dmyradio44"/><label class = "dradio__label" for="dmyradio44">4</label>
+                                    <input required class = "dradio__input" type="radio" name="dq9" value="5" id = "dmyradio45"/><label class = "dradio__label" for="dmyradio45">5</label> 
+                                </div>
+                            </li>
+                            <li>
+                                <p>
+                                    I tend to be the life of the party
+                                </p>
+                                <div class = "dradioinputs">
+                                    <input required class = "dradio__input" type="radio" name="dq10" value="1" id = "dmyradio46"/><label class = "dradio__label" for="dmyradio46">1</label> 
+                                    <input required class = "dradio__input" type="radio" name="dq10" value="2" id = "dmyradio47"/><label class = "dradio__label" for="dmyradio47">2</label>
+                                    <input required class = "dradio__input" type="radio" name="dq10" value="3" id = "dmyradio48"/><label class = "dradio__label" for="dmyradio48">3</label>
+                                    <input required class = "dradio__input" type="radio" name="dq10" value="4" id = "dmyradio49"/><label class = "dradio__label" for="dmyradio49">4</label>
+                                    <input required class = "dradio__input" type="radio" name="dq10" value="5" id = "dmyradio50"/><label class = "dradio__label" for="dmyradio50">5</label> 
+                                </div>
+                            </li>
+                            <li>
+                                <p>
+                                    I enjoy small groups of people
+                                </p>
+                                <div class = "dradioinputs">
+                                    <input required class = "dradio__input" type="radio" name="dq11" value="1" id = "dmyradio51"/><label class = "dradio__label" for="dmyradio51">1</label> 
+                                    <input required class = "dradio__input" type="radio" name="dq11" value="2" id = "dmyradio52"/><label class = "dradio__label" for="dmyradio52">2</label>
+                                    <input required class = "dradio__input" type="radio" name="dq11" value="3" id = "dmyradio53"/><label class = "dradio__label" for="dmyradio53">3</label>
+                                    <input required class = "dradio__input" type="radio" name="dq11" value="4" id = "dmyradio54"/><label class = "dradio__label" for="dmyradio54">4</label>
+                                    <input required class = "dradio__input" type="radio" name="dq11" value="5" id = "dmyradio55"/><label class = "dradio__label" for="dmyradio55">5</label> 
+                                </div>
+                            </li>
+                            <li>
+                                <p>
+                                    I am right most of the time
+                                </p>
+                                <div class = "dradioinputs">
+                                    <input required class = "dradio__input" type="radio" name="dq12" value="1" id = "dmyradio56"/><label class = "dradio__label" for="dmyradio56">1</label> 
+                                    <input required class = "dradio__input" type="radio" name="dq12" value="2" id = "dmyradio57"/><label class = "dradio__label" for="dmyradio57">2</label>
+                                    <input required class = "dradio__input" type="radio" name="dq12" value="3" id = "dmyradio58"/><label class = "dradio__label" for="dmyradio58">3</label>
+                                    <input required class = "dradio__input" type="radio" name="dq12" value="4" id = "dmyradio59"/><label class = "dradio__label" for="dmyradio59">4</label>
+                                    <input required class = "dradio__input" type="radio" name="dq12" value="5" id = "dmyradio60"/><label class = "dradio__label" for="dmyradio60">5</label> 
+                                </div>
+                            </li>
+                        </div>
+                        <div data-step class="dataStep hide">
+                            <li>
+                                <p>
+                                    I think about tasks more than others or myself
+                                </p>
+                                <div class = "dradioinputs">
+                                    <input required class = "dradio__input" type="radio" name="dq13" value="1" id = "dmyradio61"/><label class = "dradio__label" for="dmyradio61">1</label> 
+                                    <input required class = "dradio__input" type="radio" name="dq13" value="2" id = "dmyradio62" /><label class = "dradio__label" for="dmyradio62">2</label>
+                                    <input required class = "dradio__input" type="radio" name="dq13" value="3" id = "dmyradio63"/><label class = "dradio__label" for="dmyradio63">3</label>
+                                    <input required class = "dradio__input" type="radio" name="dq13" value="4" id = "dmyradio64"/><label class = "dradio__label" for="dmyradio64">4</label>
+                                    <input required class = "dradio__input" type="radio" name="dq13" value="5" id = "dmyradio65"/><label class = "dradio__label" for="dmyradio65">5</label> 
+                                </div>
+                            </li>
+                            <li>
+                                <p>
+                                    I think about motivating other people
+                                </p>
+                                <div class = "dradioinputs">
+                                    <input required class = "dradio__input" type="radio" name="dq14" value="1" id = "dmyradio66"/><label class = "dradio__label" for="dmyradio66">1</label> 
+                                    <input required class = "dradio__input" type="radio" name="dq14" value="2" id = "dmyradio67"/><label class = "dradio__label" for="dmyradio67">2</label>
+                                    <input required class = "dradio__input" type="radio" name="dq14" value="3" id = "dmyradio68"/><label class = "dradio__label" for="dmyradio68">3</label>
+                                    <input required class = "dradio__input" type="radio" name="dq14" value="4" id = "dmyradio69"/><label class = "dradio__label" for="dmyradio69">4</label>
+                                    <input required class = "dradio__input" type="radio" name="dq14" value="5" id = "dmyradio70"/><label class = "dradio__label" for="dmyradio70">5</label> 
+                                </div>
+                            </li>
+                            <li>
+                                <p>
+                                    I prefer being a member of a team
+                                </p>
+                                <div class = "dradioinputs">
+                                    <input required class = "dradio__input" type="radio" name="dq15" value="1" id = "dmyradio71"/><label class = "dradio__label" for="dmyradio71">1</label> 
+                                    <input required class = "dradio__input" type="radio" name="dq15" value="2" id = "dmyradio72"/><label class = "dradio__label" for="dmyradio72">2</label>
+                                    <input required class = "dradio__input" type="radio" name="dq15" value="3" id = "dmyradio73"/><label class = "dradio__label" for="dmyradio73">3</label>
+                                    <input required class = "dradio__input" type="radio" name="dq15" value="4" id = "dmyradio74"/><label class = "dradio__label" for="dmyradio74">4</label>
+                                    <input required class = "dradio__input" type="radio" name="dq15" value="5" id = "dmyradio75"/><label class = "dradio__label" for="dmyradio75">5</label> 
+                                </div>
+                            </li>
+                            <li>
+                                <p>
+                                    I comply with clearly defined rules
+                                </p>
+                                <div class = "dradioinputs">
+                                    <input required class = "dradio__input" type="radio" name="dq16" value="1" id = "dmyradio76"/><label class = "dradio__label" for="dmyradio76">1</label> 
+                                    <input required class = "dradio__input" type="radio" name="dq16" value="2" id = "dmyradio77"/><label class = "dradio__label" for="dmyradio77">2</label>
+                                    <input required class = "dradio__input" type="radio" name="dq16" value="3" id = "dmyradio78"/><label class = "dradio__label" for="dmyradio78">3</label>
+                                    <input required class = "dradio__input" type="radio" name="dq16" value="4" id = "dmyradio79"/><label class = "dradio__label" for="dmyradio79">4</label>
+                                    <input required class = "dradio__input" type="radio" name="dq16" value="5" id = "dmyradio80"/><label class = "dradio__label" for="dmyradio80">5</label> 
+                                </div>
+
+                            </li>
+                        </div>
+                        <div data-step class="dataStep hide">
+                            <li>
+                                <p>
+                                    I am motivated by accomplishment and authority
+                                </p>
+                                <div class = "dradioinputs">
+                                    <input required class = "dradio__input" type="radio" name="dq17" value="1" id = "dmyradio81"/><label class = "dradio__label" for="dmyradio81">1</label> 
+                                    <input required class = "dradio__input" type="radio" name="dq17" value="2" id = "dmyradio82"/><label class = "dradio__label" for="dmyradio82">2</label>
+                                    <input required class = "dradio__input" type="radio" name="dq17" value="3" id = "dmyradio83"/><label class = "dradio__label" for="dmyradio83">3</label>
+                                    <input required class = "dradio__input" type="radio" name="dq17" value="4" id = "dmyradio84"/><label class = "dradio__label" for="dmyradio84">4</label>
+                                    <input required class = "dradio__input" type="radio" name="dq17" value="5" id = "dmyradio85"/><label class = "dradio__label" for="dmyradio85">5</label> 
+                                </div>
+                            </li>
+                            <li>
+                                <p>
+                                    I am motivated by recognition and approval
+                                </p>
+                                <div class = "dradioinputs">
+                                    <input required class = "dradio__input" type="radio" name="dq18" value="1" id = "dmyradio86"/><label class = "dradio__label" for="dmyradio86">1</label> 
+                                    <input required class = "dradio__input" type="radio" name="dq18" value="2" id = "dmyradio87"/><label class = "dradio__label" for="dmyradio87">2</label>
+                                    <input required class = "dradio__input" type="radio" name="dq18" value="3" id = "dmyradio88"/><label class = "dradio__label" for="dmyradio88">3</label>
+                                    <input required class = "dradio__input" type="radio" name="dq18" value="4" id = "dmyradio89"/><label class = "dradio__label" for="dmyradio89">4</label>
+                                    <input required class = "dradio__input" type="radio" name="dq18" value="5" id = "dmyradio90"/><label class = "dradio__label" for="dmyradio90">5</label> 
+                                </div>
+                            </li>
+                            <li>
+                                <p>
+                                    I am motivated by stability and support
+                                </p>
+                                <div class = "dradioinputs">
+                                    <input required class = "dradio__input" type="radio" name="dq19" value="1" id = "dmyradio91"/><label class = "dradio__label" for="dmyradio91">1</label> 
+                                    <input required class = "dradio__input" type="radio" name="dq19" value="2" id = "dmyradio92"/><label class = "dradio__label" for="dmyradio92">2</label>
+                                    <input required class = "dradio__input" type="radio" name="dq19" value="3" id = "dmyradio93"/><label class = "dradio__label" for="dmyradio93">3</label>
+                                    <input required class = "dradio__input" type="radio" name="dq19" value="4" id = "dmyradio94"/><label class = "dradio__label" for="dmyradio94">4</label>
+                                    <input required class = "dradio__input" type="radio" name="dq19" value="5" id = "dmyradio95"/><label class = "dradio__label" for="dmyradio95">5</label> 
+                                </div>
+                            </li>
+                            <li>
+                                <p>
+                                    I am motivated by quality and correctness
+                                </p>
+                                <div class = "dradioinputs">
+                                    <input required class = "dradio__input" type="radio" name="dq20" value="1" id = "dmyradio96"/><label class = "dradio__label" for="dmyradio96">1</label> 
+                                    <input required class = "dradio__input" type="radio" name="dq20" value="2" id = "dmyradio97"/><label class = "dradio__label" for="dmyradio97">2</label>
+                                    <input required class = "dradio__input" type="radio" name="dq20" value="3" id = "dmyradio98"/><label class = "dradio__label" for="dmyradio98">3</label>
+                                    <input required class = "dradio__input" type="radio" name="dq20" value="4" id = "dmyradio99"/><label class = "dradio__label" for="dmyradio99">4</label>
+                                    <input required class = "dradio__input" type="radio" name="dq20" value="5" id = "dmyradio100"/><label class = "dradio__label" for="dmyradio100">5</label> 
+                                </div>
+                            </li>
+                        </div>
+                    </ol>
+                </div>
+                <p id="errorMsg" style="color: red;" class="hide">Oh no, it looks like you missed an answer. Please check that all prompts have a response before you proceed.</p>
+                <div class = "controls"> 
+                <button id = "nextBtn">
+                    <div>
+                        Next
+                    </div>
+                    <span class="material-icons">
+                        arrow_forward
+                    </span>
+                </button>   
+                <button id="resultsBtn" class="hide">Get Results</button> 
+                </div>
+                <div class = "progressbar">
+                    <progress id ="dprogbar" min="0" max="100" value="0"></progress>
+                </div> 
+            </div>
+        </div>
+        <div id ="dendpage" class = "hide">
+            <div>
+                <p>Please <b>write down or screenshot</b> your top 2 personality scores. This is your personality style and you'll be entering this combination into your Growth Track Connection Form later.</p>
+                <h1>Your DISC scores are:</h1>
+            </div>
+            <div id = "finalScores">
+               <span id = "dd_score">D</span>
+               <span id = "di_score">I</span>
+               <span id = "ds_score">S</span>
+               <span id = "dc_score">C</span>
+            </div>   
+               <div class = "center_text">Tap/Click on any of the letters to see more</div>
+               <div id = "dd_explanation" class = "hide">
+                <h4>“D” personalities are dominant, direct, task-oriented, decisive, organized, outgoing, and outspoken. As you embrace these strengths, also make sure to:
+                </h4>
+                <ul class = "left_align">
+                    <li>
+                        Listen attentively to others 
+                    </li>
+                    <li>
+                        Support other team members 
+                    </li>
+                    <li>
+                        Invest in personal relationships 
+                    </li>
+                    <li>
+                        Balance controlling and domineering tendencies 
+                    </li>
+                    <li>
+                        Value the opinions, feelings, and desires of others 
+                    </li>
+                </ul>
+               </div>
+               <div id = "di_explanation" class = "hide">
+                    <h4>“I” personalities are influential, witty, easygoing, outgoing, and people oriented. As you embrace these strengths, also make sure to:
+                    </h4>
+                    <ul class = "left_align">
+                        <li>
+                            Be aware of tasks that need to be accomplished 
+                        </li>
+                        <li>
+                            Balance your emotions, words, and actions 
+                        </li>
+                        <li>
+                            Remember to consider details and facts 
+                        </li>
+                        <li>
+                            Slow down your pace for others when necessary 
+                        </li>
+                        <li>
+                            Listen attentively to others instead of only talking 
+                        </li>
+                        <li>
+                            Choose thoughtful decision-making over impulsive decision-making
+                        </li>
+                    </ul>
+               </div>
+               <div id = "ds_explanation" class = "hide">
+                <h4>
+                    “S” personalities are steady, stable, analytical, introverted, and people oriented. As you embrace these strengths, also make sure to:                    
+                </h4>
+                <ul class = "left_align">
+                    <li>
+                        Take initiative 
+                    </li>
+                    <li>
+                        Practice flexibility 
+                    </li>
+                    <li>
+                        Approach confrontation constructively 
+                    </li>
+                    <li>
+                        Be direct in your interactions when necessary 
+                    </li>
+                    <li>
+                        Realize change can be healthy, and be willing to adapt 
+                    </li>
+                    <li>
+                        Consider the overall goals of your family or group, not just specific processes or procedures
+                    </li>
+                </ul>
+               </div>
+               <div id = "dc_explanation" class = "hide">
+                    <h4>
+                        “C” personalities are compliant, competent, task-oriented, goal-oriented, and introverted. As you embrace these strengths, also make sure to:                                            
+                    </h4>
+                    <ul class = "left_align">
+                        <li>
+                            Be decisive when necessary 
+                        </li>
+                        <li>
+                            Cultivate personal relationships 
+                        </li>
+                        <li>
+                            Be open to others’ ideas and methods 
+                        </li>
+                        <li>
+                            Balance your focus between facts and people 
+                        </li>
+                        <li>
+                            Focus on doing the right things, not just doing things right 
+                        </li>
+                        <li>
+                            Help others accomplish their goals
+                        </li>
+                    </ul>
+                </div>
+               <br><br>
+               <div id="DISClaimer" class = "center_text">
+                   For more in-depth information about these values, refer to the Growth Track handbook.<br>
+                   Once you have recorded your scores, close this tab and return to <a style="color: blue; cursor: pointer;" href="https://myfreedom.org/gtsteps">myfreedom.org/gtsteps</a>.
+                </div>
+                <br>
+                <br>
+                <br>
+        </div>
     </div>
 </body>
 </html>
