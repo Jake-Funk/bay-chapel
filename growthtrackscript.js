@@ -203,7 +203,6 @@ function getresults() {
 } 
 function fullresults() {
     document.getElementById("allscores").setAttribute("class", "thatsall")
-    
 }
 
 function DISCassess() {
@@ -216,48 +215,6 @@ function giftsassess() {
     document.getElementById("giftsassesspage").setAttribute("class", "giftstestpage");
 }
 
-
-
-function more_about_D() {
-    document.getElementById("di_explanation").setAttribute("class", "hide");
-    document.getElementById("ds_explanation").setAttribute("class", "hide");
-    document.getElementById("dc_explanation").setAttribute("class", "hide");
-    document.getElementById("dd_explanation").setAttribute("class", "heading_p");
-}
-
-const d_btn = document.getElementById("dd_score")
-d_btn.addEventListener("click", more_about_D)
-
-function more_about_I() {
-    document.getElementById("dd_explanation").setAttribute("class", "hide");
-    document.getElementById("ds_explanation").setAttribute("class", "hide");
-    document.getElementById("dc_explanation").setAttribute("class", "hide");
-    document.getElementById("di_explanation").setAttribute("class", "heading_p");
-}
-
-const i_btn = document.getElementById("di_score")
-i_btn.addEventListener("click", more_about_I)
-
-function more_about_S() {
-    document.getElementById("di_explanation").setAttribute("class", "hide");
-    document.getElementById("dd_explanation").setAttribute("class", "hide");
-    document.getElementById("dc_explanation").setAttribute("class", "hide");
-    document.getElementById("ds_explanation").setAttribute("class", "heading_p");
-}
-
-const s_btn = document.getElementById("ds_score")
-s_btn.addEventListener("click", more_about_S)
-
-function more_about_C() {
-    document.getElementById("di_explanation").setAttribute("class", "hide");
-    document.getElementById("ds_explanation").setAttribute("class", "hide");
-    document.getElementById("dd_explanation").setAttribute("class", "hide");
-    document.getElementById("dc_explanation").setAttribute("class", "heading_p");
-}
-
-const c_btn = document.getElementById("dc_score")
-c_btn.addEventListener("click", more_about_C)
-
 function back_to_start() {
     /*document.getElementById("dendpage").setAttribute("class", "hide");
     document.getElementById("endpage").setAttribute("class", "hide");*/
@@ -268,8 +225,8 @@ function back_to_start() {
     document.getElementById("gifts_home_btn").setAttribute('class', "hide");
     document.getElementById("halfway_message").setAttribute("class", "hide");
     document.getElementById("end_message").setAttribute("class", "heading_p");
-
 }
+
 function dback_to_start() {
     /*document.getElementById("dendpage").setAttribute("class", "hide");
     document.getElementById("endpage").setAttribute("class", "hide");*/
@@ -280,8 +237,4 @@ function dback_to_start() {
     document.getElementById("gifts_start_btn").setAttribute("class", "btn");
     document.getElementById("intro_message").setAttribute("class", "hide");
     document.getElementById("halfway_message").setAttribute("class", "heading_p");
-}
-const allDone = () => {
-    window.open("https://myfreedom.org/gtsteps");
-    window.close();
 }

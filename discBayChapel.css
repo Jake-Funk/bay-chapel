@@ -103,7 +103,7 @@ body {
     padding: 8px 14px;
     font-size: 1.75vh;
     color: black;
-    background: #ecedf3;
+    background: #f3f3f4;
     cursor: pointer;
     transition: 0.5s;
 }
@@ -129,7 +129,7 @@ body {
     min-width: 3vh;
     font-size: 3vh;
     color: black;
-    background: white;
+    background: #f3f3f4;
     cursor: pointer;
     transition: 0.5s;
     border-radius: 50%;
@@ -138,7 +138,6 @@ body {
 .dradio__label:nth-of-type(n) {
     border: solid 2px hsl(4, 50%, 40%);
     padding: 5vw;
-
 }
 .dradio__input:checked + .dradio__label:nth-of-type(n) {
     background: hsl(4, 50%, 40%);
@@ -193,28 +192,20 @@ body {
     font-size: 3vh;
 }
 
-
 /* ------------------- disc styles ---------------------------*/
 * {
-    font-family: Avenirnextltpro, Arial,sans-serif;
+    font-family: Avenirnextltpro, Arial, sans-serif;
 }
 
 body {
     margin: 0;
     padding: 0;
     font-size: 18px;
+    background: #f3f3f4;
 }
 
 
 /*----------  Navbar styles  ----------*/
-
-.navbar {
-    width: 100%;
-    background: black;
-}
-.navbar img {
-    padding: 1vh 4vw;
-}
 
 .content {
     margin: 15px;

@@ -48,6 +48,7 @@ const gotoNextGroup = () => {
         currentGroup++
         errMsg.classList.add("hide")
         showCurrentGroup()
+        window.scrollTo({top: 0, behavior: "smooth"})
     } else {
         errMsg.classList.remove("hide")
     }
@@ -121,3 +122,6 @@ function more_about_C() {
     document.getElementById("dd_explanation").setAttribute("class", "hide");
     document.getElementById("dc_explanation").setAttribute("class", "heading_p");
 }
+
+const c_btn = document.getElementById("dc_score")
+c_btn.addEventListener("click", more_about_C)
