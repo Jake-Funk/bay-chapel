@@ -6,6 +6,7 @@
 body {
     margin: 0;
     padding: 0;
+    color: #333333
 }
 /*----------- Content styles -----------*/
 .homepage {
@@ -100,7 +101,7 @@ body {
     width: 100%;
     padding: 8px 14px;
     font-size: 1.75vh;
-    color: black;
+    color: #333333;
     background: #f3f3f4;
     cursor: pointer;
     transition: 0.5s;
@@ -126,7 +127,7 @@ body {
     box-sizing: content-box;
     min-width: 3vh;
     font-size: 3vh;
-    color: black;
+    color: #333333;
     background: #f3f3f4;
     cursor: pointer;
     transition: 0.5s;
@@ -366,7 +367,7 @@ button {
 }
 @media (min-width: 1026px) {
     .top_progress_bar {
-        color: black;
+        color: #333333;
         padding-top: 1vh;
         padding-bottom: 1vh;
         height: auto;
