@@ -410,3 +410,16 @@ button {
     padding: 10px;
     font-size: 100%;
 }
+
+#navbar-buffer {
+        display: static;
+        width: 100vw;
+        height: 70px;
+        background-color: #333333;
+    }
+
+@media screen and (max-width: 991px){
+    #navbar-buffer {
+        display: none;
+    }
+}
