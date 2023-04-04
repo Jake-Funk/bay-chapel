@@ -413,13 +413,22 @@ button {
 
 #navbar-buffer {
         position: fixed;
+        top: 0;
+        left: 0;
         width: 100vw;
         height: 70px;
         background-color: #333333;
     }
 
+.content {
+    margin-top: 90px;
+}
+
 @media screen and (max-width: 991px){
     #navbar-buffer {
         display: none;
+    }
+    .content {
+        margin-top: auto;
     }
 }
