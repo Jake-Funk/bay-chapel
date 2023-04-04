@@ -412,7 +412,7 @@ button {
 }
 
 #navbar-buffer {
-        display: static;
+        position: fixed;
         width: 100vw;
         height: 70px;
         background-color: #333333;
